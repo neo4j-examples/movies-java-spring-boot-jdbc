@@ -25,7 +25,7 @@ import java.util.*;
 @RestController("/")
 public class SampleMovieApplication extends WebMvcConfigurerAdapter {
 
-    public static final String NEO4J_URL = System.getProperty("NEO4J_URL","jdbc:neo4j://localhost:7474");
+    public static final String NEO4J_URL = System.getProperty("NEO4J_URL","jdbc:neo4j:http://localhost:7474");
 
     public static final RowMapper<Movie> MOVIE_ROW_MAPPER = new RowMapper<Movie>() {
         public Movie mapRow(ResultSet rs, int rowNum) throws SQLException {
